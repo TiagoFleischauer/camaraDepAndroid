@@ -32,6 +32,7 @@ public class PartidoActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private TextView title;
     private TextView sigla;
+    private TextView membros;
     private ImageView logo;
 
     @Override
@@ -48,6 +49,7 @@ public class PartidoActivity extends AppCompatActivity {
 
         title = findViewById(R.id.textView);
         sigla = findViewById(R.id.sigla);
+        membros = findViewById(R.id.membros);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -97,6 +99,8 @@ public class PartidoActivity extends AppCompatActivity {
                     Partido partido = response.body().getPartido();
                     title.setText(partido.getNome());
                     sigla.setText(partido.getSigla());
+                    Partido.Status status = partido.getStatus();
+                    membros.setText(status.getTotalMembros() + " membros");
                     Picasso.get().load(partido.getUrlLogo()).into(logo);
                     Toast.makeText(getApplicationContext(), partido.getNome(), Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);

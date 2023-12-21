@@ -20,6 +20,20 @@ public class Partido {
     @Expose
     private String urlLogo;
 
+    @SerializedName("status")
+    @Expose
+    private Status status;
+
+    public static class Status {
+        private String totalMembros;
+        public String getTotalMembros() {
+            return totalMembros;
+        }
+        public void setTotalMembros(String totalMembros) {
+            this.totalMembros = totalMembros;
+        }
+    }
+
     public int getId() {
         return id;
     }
@@ -50,5 +64,13 @@ public class Partido {
 
     public void setUrlLogo(String urlLogo) {
         this.urlLogo = urlLogo;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

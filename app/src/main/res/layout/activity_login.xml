@@ -16,7 +16,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -27,7 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:maxLines="1"
+            android:inputType="text"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -39,7 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/senha"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
