@@ -17,6 +17,8 @@ import com.example.camaraDep.Model.Partido;
 import com.example.camaraDep.Model.RespostaPartidos;
 import com.example.camaraDep.Service.RestService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,11 +37,22 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private ListView lista;
     private ArrayAdapter<String> partidoAdapter;
+    FirebaseUser user;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+        if(user == null) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            startActivity(intent);
+            finish();
+        }
 
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
