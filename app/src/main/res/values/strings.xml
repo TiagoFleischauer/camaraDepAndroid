@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CamaraDep</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="clique_para_logar">Clique para Logar</string>
+    <string name="clique_cadastrar">Clique para se cadastrar</string>
+    <string name="logout">Sair</string>
 </resources>

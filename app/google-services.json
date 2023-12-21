@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1061532286779",
+    "project_id": "camara-dep",
+    "storage_bucket": "camara-dep.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061532286779:android:1aff7c8a55030d3ef8811e",
+        "android_client_info": {
+          "package_name": "com.example.camaraDep"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM97pdAvAm1ElXuh4KVGkbw9SRVLcs6Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
